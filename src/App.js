@@ -13,6 +13,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
+  debugger;
   return {
     user: state.userInfo.user
   }
