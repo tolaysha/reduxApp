@@ -1,5 +1,4 @@
-import React, { Component, Fragment} from 'react';
-import logo from '../logo.svg';
+import React, { Fragment} from 'react';
 import '../App.css';
 
 import { setUser } from '../reducrers/info'
@@ -29,7 +28,7 @@ let ChangeName = ({ user, onClick }) =>{
 
 function mapStateToProps(state){
   return {
-    user: state.userInfo[0].user
+    user: state.userInfo[0].user //TODO
   }
 }
 function mapDispatchToProps(dispatch, value) {
