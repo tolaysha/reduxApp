@@ -11,7 +11,6 @@ export const setUser = user => ({
 export default function userinfo(state = [{user:"unknown user"}], action){
     switch (action.type) {
         case 'SET_USER':
-            debugger;
             return [
                 {
                   user: action.user

@@ -1,7 +1,7 @@
 import React, { Component, Fragment} from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import ChangeName from "./components/ChangeName"
 import { setUser } from './reducrers/info'
 import { connect } from "react-redux"
 function handleClick(e) {
@@ -9,24 +9,22 @@ function handleClick(e) {
 }
 class App extends Component {
   debugger;
-  render() { // TOFIX
+  render() {
     return (
-          <Fragment>
-            <h2>Welcome to React {this.props.user}</h2>
-            <button onClick={()=>{debugger;this.props.onClick()}}>change store</button> 
-          </Fragment>
+      <ChangeName />
     );
   }
 }
 
-function mapStateToProps(state) {
-  debugger;
-  return {
-    user: state.userInfo[0].user
-  }
-}
-const mapDispatchToProps = (dispatch) => ({
-  onClick: () => {debugger;dispatch(setUser("new user"))}  // TOFIX
-})
+// function mapStateToProps(state) {
+//   debugger;
+//   return {
+//     user: state.userInfo[0].user
+//   }
+// }
+// const mapDispatchToProps = (dispatch) => ({
+//   onClick: () => {debugger;dispatch(setUser("new user"))}  // TOFIX
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+//export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
