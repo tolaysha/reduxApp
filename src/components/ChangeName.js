@@ -1,4 +1,5 @@
 import React, { Fragment} from 'react';
+import PropTypes from 'prop-types';
 import '../App.css';
 
 import { setUser } from '../reducrers/info'
@@ -25,6 +26,10 @@ let ChangeName = ({ user, onClick }) =>{
     );
   
 }
+ChangeName.user = {
+    user: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
+};
 
 function mapStateToProps(state){
   return {
