@@ -1,9 +1,11 @@
 import React, { Fragment} from 'react';
 import PropTypes from 'prop-types';
 import '../App.css';
-
+import Sellect from "./select";
 import { setUser } from '../reducrers/info'
 import { connect } from "react-redux"
+import 'antd/dist/antd.css'
+//import './Select.css'
 let ChangeName = ({ user, onClick }) =>{
     let input
     return (
@@ -22,6 +24,10 @@ let ChangeName = ({ user, onClick }) =>{
                 input = node
             }} />
             </form>
+            <Sellect />
+            <Sellect />
+            <Sellect />
+            <Sellect />
         </Fragment>
     );
   
