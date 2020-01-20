@@ -7,10 +7,20 @@ class App extends Component {
   debugger;
   render() {
     return (
-      <Fragment>
-        <NavBar />
-        <ChangeName />
-
+      <Fragment  class="grid-container">
+        <div class="grid-container">
+          <div class="navbar">
+            <NavBar />
+          </div>
+          
+          <div class="sidebar"></div>
+          <div class="content">
+            <ChangeName />
+          </div>
+          
+        </div>
+          
+        
       </Fragment>
 
     );

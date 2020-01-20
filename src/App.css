@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.grid-container {
+  height: '100vh';
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 1fr 14fr;
+  grid-template-areas: "navbar navbar navbar navbar" "sidebar content content content" "sidebar content content content";
+}
+
+.navbar { grid-area: navbar; }
+
+.sidebar { grid-area: sidebar;     background-color: grey; height: 100vh; }
+
+.content { grid-area: content;     height: 100vh; }
