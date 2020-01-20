@@ -5,6 +5,8 @@ import Sellect from "./select";
 import { setUser } from '../reducrers/info'
 import { connect } from "react-redux"
 import 'antd/dist/antd.css'
+
+import Dropdown from './Dropdown'
 //import './Select.css'
 let ChangeName = ({ user, onClick }) =>{
     let input
@@ -28,6 +30,7 @@ let ChangeName = ({ user, onClick }) =>{
             <Sellect />
             <Sellect />
             <Sellect />
+            <Dropdown />
         </Fragment>
     );
   
