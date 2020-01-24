@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import DeleteIcon from '@material-ui/icons'
 
 const useStyles = makeStyles({
   table: {
@@ -40,7 +41,8 @@ const getRowsData = (rows)=>{
 const RenderRow = ({data, keys}) =>{
   debugger;
   return keys.map((key, index)=>{
-    return <TableCell key={index}>{data[key]}</TableCell>
+    //return <TableCell key={index} component={()=>data[key]}></TableCell>
+  return <TableCell key={index} >{data[key]}</TableCell>
   })
 }
 
