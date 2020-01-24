@@ -19,23 +19,23 @@ class SettingsMenu extends React.Component {
   render() {
     return (
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
         <li>
-            <a href="#">Products &#9662;</a>
-            <ul class="dropdown">
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">Monitors</a></li>
-                <li><a href="#">Printers</a></li>
+            <a href="/">Products &#9662;</a>
+            <ul className="dropdown">
+                <li><a href="/">Laptops</a></li>
+                <li><a href="/">Monitors</a></li>
+                <li><a href="/">Printers</a></li>
             </ul>
         </li>
-        <li><a href="#">Contact</a></li>
-        <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+        <li><a href="/">Contact</a></li>
+        <div className="dropdown">
+        <button className="dropbtn">Dropdown</button>
+        <div className="dropdown-content">
+          <a href="/">Link 1</a>
+          <a href="/">Link 2</a>
+          <a href="/">Link 3</a>
         </div>
       </div>
     </ul>
