@@ -11,11 +11,13 @@ class App extends Component {
       <div>
         <div className="grid-container">
           <div className="navbar">
+            
+          <NavBar />
           </div>
-          
           <div className="sidebar"></div>
           <div className="content">
             <Table />
+            <ChangeName />
           </div>
           
         </div>

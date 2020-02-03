@@ -8,7 +8,10 @@ import 'antd/dist/antd.css'
 
 import Dropdown from './Dropdown'
 //import './Select.css'
-let ChangeName = ({ user, onClick }) =>{
+const handleClick=(value,dispatch)=>{
+  dispatch(setUser(value))
+}
+let ChangeName = ({ user, dispatch}, state ) =>{
     let input
     return (
         <Fragment>
@@ -17,7 +20,8 @@ let ChangeName = ({ user, onClick }) =>{
                 if (!input.value.trim()) {
                 return
                 }
-                onClick(input.value);
+                debugger;
+                setUser(input.value);
             }}>
             <label>
                  Welcome to React {user}
@@ -42,13 +46,14 @@ ChangeName.user = {
 
 function mapStateToProps(state){
   return {
-    user: state.userInfo[0].user //TODO
+    user: state.userInfo[0].user,
+    state: state //TODO
   }
 }
-function mapDispatchToProps(dispatch, value) {
-    return{
-        onClick: (value = 'new user') => {dispatch(setUser(value))}  
-    }
-}
+// function mapDispatchToProps(dispatch, value) {
+//     return{
+//         onClick: (value = 'new user') => {dispatch(setUser(value))}  
+//     }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChangeName);
+export default connect(mapStateToProps)(ChangeName);

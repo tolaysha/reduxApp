@@ -33,13 +33,11 @@ const getKeys = (row1) =>{
 const getRowsData = (rows)=>{
   var keys = getKeys(rows[0]);
   var items = rows;
-  debugger;
   return items.map((row, index)=>{
     return <TableRow key={index}><RenderRow key={index} data={row} keys={keys}/></TableRow>
   })
 }
 const RenderRow = ({data, keys}) =>{
-  debugger;
   return keys.map((key, index)=>{
     //return <TableCell key={index} component={()=>data[key]}></TableCell>
   return <TableCell key={index} >{data[key]}</TableCell>
