@@ -8,9 +8,9 @@ import 'antd/dist/antd.css'
 
 import Dropdown from './Dropdown'
 //import './Select.css'
-const handleClick=(value,dispatch)=>{
-  dispatch(setUser(value))
-}
+// const handleClick=(value,dispatch)=>{
+//   dispatch(setUser(value))
+// }
 let ChangeName = ({ user, dispatch}, state ) =>{
     let input
     return (
@@ -21,7 +21,7 @@ let ChangeName = ({ user, dispatch}, state ) =>{
                 return
                 }
                 debugger;
-                setUser(input.value);
+                dispatch(setUser(input.value));
             }}>
             <label>
                  Welcome to React {user}
@@ -45,15 +45,16 @@ ChangeName.user = {
 };
 
 function mapStateToProps(state){
+  debugger;
   return {
     user: state.userInfo[0].user,
     state: state //TODO
   }
 }
-// function mapDispatchToProps(dispatch, value) {
-//     return{
-//         onClick: (value = 'new user') => {dispatch(setUser(value))}  
-//     }
-// }
+function mapDispatchToProps(dispatch, value) {
+    return{
+        onClick: (value = 'new user') => {dispatch(setUser(value))}  
+    }
+}
 
 export default connect(mapStateToProps)(ChangeName);

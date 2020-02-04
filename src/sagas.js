@@ -1,7 +1,7 @@
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 import setUser from './reducrers/info'
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
-function* fetchUser(value) {
+function* fetchUser() {
    try {
       debugger;
       const user = yield call(setTimeout(()=>{console.log('its sagajs call')}),1000);
@@ -16,6 +16,7 @@ function* fetchUser(value) {
   Allows concurrent fetches of user.
 */
 function* mySaga() {
+  debugger;
   yield takeEvery('SET_USER', fetchUser);
 }
 
