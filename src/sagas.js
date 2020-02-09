@@ -4,7 +4,7 @@ import setUser from './reducrers/info'
 function* fetchUser() {
    try {
       debugger;
-      const user = yield call(setTimeout(()=>{console.log('its sagajs call')}),1000);
+     //const user = yield call(setTimeout(()=>{console.log('its sagajs call')}),1000);
       yield put(setUser('sagauser'));
    } catch (e) {
       //yield put({type: "USER_FETCH_FAILED", message: e.message});
