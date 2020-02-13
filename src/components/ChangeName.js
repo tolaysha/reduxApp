@@ -20,7 +20,6 @@ let ChangeName = ({ user, dispatch}, state ) =>{
                 if (!input.value.trim()) {
                 return
                 }
-                debugger;
                 dispatch(setUser(input.value));
             }}>
             <label>
@@ -45,7 +44,6 @@ ChangeName.user = {
 };
 
 function mapStateToProps(state){
-  debugger;
   return {
     user: state.userInfo[0].user,
     state: state //TODO

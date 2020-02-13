@@ -3,9 +3,9 @@ import './App.css';
 import ChangeName from "./components/ChangeName"
 import NavBar from "./components/NavBar"
 import Table from "./components/materialuitable"
+import Users from "./components/Users"
 
 class App extends Component {
-  debugger;
   render() {
     return (
       <div>
@@ -18,7 +18,9 @@ class App extends Component {
           <div className="content">
             <Table />
             <ChangeName />
+            <Users />
           </div>
+
           
         </div>
           
